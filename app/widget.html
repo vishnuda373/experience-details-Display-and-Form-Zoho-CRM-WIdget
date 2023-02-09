@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body id="container">
+    <section >
+      <div class="d-flex justify-content-end" >
+      <button data-toggle="collapse" data-target="#formelements" class="btn btn-primary d-flex justify-content-end" id="togglebtn">Add New Experience</button>
+      </div>
+      <div id="formelements" class="collapse mb-3">
+        <form class="form row g-3 text-dark font-weight-bold" action="/" enctype="multipart/form-data" id="inputform" style="padding:5px;color:white;margin-left:0px;margin-top: 5px;box-shadow: 0 3px 10px rgb(0 0 0 / 0.2)">
+          <div class="col-md-12">
+            <label for="selector" class="mt-3">Experience or Year Gap:</label>
+            <select name="selector" class="form-control" id="selector">
+              <option value="Experience">Experience</option>
+              <option value="Year Gap">Year Gap</option>
+            </select>
+          </div>
+          <div id="titleDiv" class="col-md-6">
+            <label for="jobtitle" class="mt-3">Enter Job Title:</label>
+            <input type="input" class="form-control" placeholder="Job Title" id="jobtitle">
+          </div>   
+          <div id="companyDiv" class="col-6">
+            <label for="company" class="mt-3">Enter Company Name:</label>
+            <input type="input" class="form-control" placeholder="Company Name" id="company">
+          </div>
+          <div id="currentjobDiv"  class="col-md-12">
+            <label for="currentjob" class="mt-3">Current Job:</label>
+            <input type="checkbox" class="currentjob" placeholder="Job Title" id="currentjob">
+          </div>
+          <div class="col-6">
+            <label for="from" class="mt-3">From Date:</label>
+            <input type="date" class="form-control" placeholder="From date" id="from">
+          </div>
+          <div class="col-6" id="todate">
+            <label for="to" class="mt-3">To Date:</label>
+            <input type="date" class="form-control"  id="to">
+          </div>
+          <div id="jobResp"  class="col-6">
+            <label for="responsibility" class="mt-3">Enter Job Responsibility</label>
+            <input type="input" class="form-control" placeholder="Enter Job Responsibility" id="responsibility">
+          </div>
+          <div id="expQualification" class="col-md-6">
+            <label for="relation" class="mt-3">Is Experience Related to Higher Qualification?:</label>
+            <select name="relation" class="form-control" id="relation">
+              <option value="yes">Yes</option>
+              <option value="no">No</option>
+            </select>
+          </div>
+          <div >
+            <button type="submit" class="btn btn-primary mt-3 ml-3" id="btnsubmit">Submit</button>
+          </div>
+          <div class="col-md-6">
+            <button type="cancel" class="btn btn-secondary mt-3" id="btnreset">Reset</button>
+          </div>
+          <div id="cover-spin"></div>
+        </form>
+      </div>
+    </section>
+    <section>
+      <table class="table table-light table-striped table-bordered mt-3" id="table" style="box-shadow: 5px 3px 10px rgb(0 0 0 / 0.8)">
+        <thead>
+          <tr class="bg-dark text-light">
+            <th>Experience Name</th>
+            <th>Company Name</th>
+            <th>From</th>
+            <th>To</th>
+          </tr>
+        </thead>
+        <tbody id="tablebody">
+        </tbody>
+      </table>
+      
+    </section>
+    
+    <script src="Assets/ZohoEmbededAppSDK.min.js"></script>
+    <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
